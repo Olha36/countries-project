@@ -1,0 +1,23 @@
+.random-container {
+  text-align: center;
+  padding-top: 0.5rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 40px;
+  margin-bottom: 15px;
+  padding: 1rem;
+  transition: transform 0.2s;
+  box-shadow: 0 2px 8px 10px #00000012;
+  width: 90%;
+  margin: 15px auto;
+}
+.country-info__flag {
+  width: 30%;
+  height: auto;
+}
+h2 {
+  font-size: 1rem;
+}
+.random-container img {
+  margin: 15px 0;
+}
