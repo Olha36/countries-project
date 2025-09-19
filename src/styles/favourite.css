@@ -1,0 +1,28 @@
+.heart {
+  font-size: 2rem;
+  color: white;
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.filled {
+  background-color: red;
+  color: white;
+  border-color: red;
+}
+.saved-text {
+  text-align: center;
+  padding: 1rem 0;
+}
+.country-list {
+  padding: 0.5rem;
+}
