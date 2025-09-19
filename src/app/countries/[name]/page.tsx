@@ -17,8 +17,13 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function CountryPage({ params }: { params: { name: string } }) {
-  const name = decodeURIComponent(params.name);
+export default async function CountryPage({ 
+  params 
+}: { params: Promise<{ name: string }>
+ }) {
+
+  const {name} = await params
+  const decodedName = decodeURIComponent(name);
 
   const fields = [
     'name',
@@ -32,7 +37,9 @@ export default async function CountryPage({ params }: { params: { name: string }
   ].join(',');
 
   const res = await fetch(
-    `https://restcountries.com/v3.1/name/${encodeURIComponent(name)}?fullText=true&fields=${fields}`
+    `https://restcountries.com/v3.1/name/${encodeURIComponent(
+      decodedName
+    )}?fullText=true&fields=${fields}`
   );
 
   if (!res.ok) {
