@@ -5,17 +5,8 @@ h1 {
 .country-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 1rem;
   justify-content: center;
-}
-
-.country-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 40px;
-  padding: 0.5rem;
-  transition: transform 0.2s;
-  box-shadow: 0 2px 8px 10px #00000012;
 }
 
 .country-card:hover {
@@ -71,7 +62,7 @@ h1 {
 }
 .country-info__flag {
   height: auto;
-  margin-right: 20px;
+  margin-right: 40px;
 }
 .country-info__region {
   color: #726d6d;
@@ -86,17 +77,27 @@ a {
 }
 
 .country-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
   max-width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   gap: 2px;
+  border-radius: 40px;
+  padding: 0.5rem;
+  transition: transform 0.2s;
+  box-shadow: 0 2px 8px 10px #00000012;
 }
 
 @media screen and (min-width: 2100px) {
   .country-card {
     max-width: 600px;
+  }
+
+  .country-info__flag {
+    margin-right: 80px;
   }
 }
 
