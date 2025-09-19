@@ -113,12 +113,7 @@ a {
   }
 }
 @media (max-width: 823px) {
-  .search-controls {
-    display: grid;
-    justify-items: center;
-  }
-  .search-controls__selection {
-    width: 50%;
+  .search-controls__selection { 
     text-align: center;
   }
 }
