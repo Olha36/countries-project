@@ -1,12 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+type SelectionProps = {
+  search: string;
+  setSearch: (value: string) => void;
+  region: string;
+  setRegion: (value: string) => void;
+};
 
-export default function Selection() {
-  const [search, setSearch] = useState('');
-  const [region, setRegion] = useState('All');
-
- 
+export default function Selection({ search, setSearch, region, setRegion }: SelectionProps) {
   return (
     <>
       <div className="search-controls">

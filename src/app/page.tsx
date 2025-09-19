@@ -4,6 +4,7 @@ import { fetchCountries } from '@/lib/api';
 import type { Country } from '@/types/CountryTypes';
 import { useEffect, useState } from 'react';
 import CountriesList from '@/components/CountryPage';
+import Selection from '@/components/Selection';
 
 export default function Home() {
   const [countries, setCountries] = useState<Country[]>([]);
@@ -23,29 +24,7 @@ export default function Home() {
     <>
       <Header />
       <main>
-        <div className="search-controls">
-          <input
-            type="text"
-            placeholder="enter the country"
-            className="search-controls__input-search"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-          <select
-            name="country"
-            id="country"
-            className="search-controls__selection"
-            value={region}
-            onChange={(e) => setRegion(e.target.value)}
-          >
-            <option value="All">All Regions</option>
-            <option value="Africa">Africa</option>
-            <option value="Americas">Americas</option>
-            <option value="Asia">Asia</option>
-            <option value="Europe">Europe</option>
-            <option value="Oceania">Oceania</option>
-          </select>
-        </div>
+        <Selection search={search} setSearch={setSearch} region={region} setRegion={setRegion} />
         <div className="countries-container">
           <CountriesList countries={filteredCountries} itemsPerPage={10} />
         </div>
